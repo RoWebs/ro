@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rowebs</title>
+    <link rel="icon" type="image/png" href="Main icon.png">
+    <style>
+        /* Reset Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Body Styling */
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #6a11cb, #2575fc); /* Vibrant gradient */
+            color: white;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        /* Header */
+        header {
+            width: 100%;
+            max-width: 800px;
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 10px;
+        }
+
+        header h1 {
+            font-size: 2rem;
+        }
+
+        /* Toggle Button */
+        .toggle-btn {
+            margin-top: 10px;
+            padding: 10px 15px;
+            border: none;
+            background-color: #FFD700;
+            color: #333;
+            font-weight: bold;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .toggle-btn:hover {
+            background-color: #ffcc00;
+        }
+
+        /* APK List Section */
+        .apk-container {
+            width: 100%;
+            max-width: 800px;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .apk-container h2 {
+            text-align: center;
+            margin-bottom: 10px;
+        }
+
+        .apk-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+
+        .apk-item span {
+            font-size: 1rem;
+        }
+
+        .download-btn {
+            background-color: #28a745;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .download-btn:hover {
+            background-color: #1f7a33;
+        }
+
+        /* Light Mode */
+        body.light-mode {
+            background: linear-gradient(135deg, #f8f9fa, #dfe6e9);
+            color: #333;
+        }
+
+        .light-mode header {
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .light-mode .apk-container {
+            background: rgba(255, 255, 255, 0.9);
+        }
+
+        .light-mode .apk-item {
+            background: rgba(0, 0, 0, 0.1);
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <img src="Main icon.png" width="100px"/>
+        <h1>Rowebs - APK Hosting</h1>
+        <button class="toggle-btn" onclick="toggleTheme()">Toggle Light/Dark Mode</button>
+    </header>
+
+    <!-- APK List -->
+    <div class="apk-container">
+        <h2>Download APKs</h2>
+        
+        <div class="apk-item">
+            <span>Untitled To-Do (9 MB)</span>
+            <a href="Untitled To-Do.apk" class="download-btn" download>Download</a>
+        </div>
+
+        <div class="apk-item">
+            <span>Future App 1 (0 MB)</span>
+            <a href="#" class="download-btn">Coming Soon</a>
+        </div>
+
+        <div class="apk-item">
+            <span>Future App 2 (0 MB) </span>
+            <a href="#" class="download-btn">Coming Soon</a>
+        </div>
+
+        <!-- Add more APK entries as needed -->
+    </div>
+
+    <script>
+        // Light/Dark Mode Toggle
+        function toggleTheme() {
+            document.body.classList.toggle("light-mode");
+        }
+    </script>
+
+</body>
+</html>
